@@ -1,38 +1,232 @@
-.App {
-  text-align: center;
+/* src/App.css */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
-  flex-direction: column;
+}
+
+.sidebar {
+  width: 18%;
+
+  color: #797676;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+/* Style the links in the sidebar */
+.sidebar a {
+  text-decoration: none;
+  color: #797676;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  flex: 1;
+  padding: 10px 20px;
+}
+.colorContainer {
+  border-radius: 0.35rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+}
+li a.active {
+  background-color: #31ade1; /* Set the background color for the active link */
+  color: white; /* Set the text color for the active link */
+  display: block;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+}
+/* searchbar css */
+
+.search-bar-container {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 2px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+.search-bar-container input {
+  border: none;
+}
+.search-bar-container input:focus {
+  border: none;
+}
+.icon {
+  margin: 0 8px;
+  cursor: pointer;
+}
+/*logo*/
+.logo {
+  color: black;
+  font-weight: 600;
+  font-style: oblique;
+}
+
+/* AverageScore.css */
+.average-score-container {
+  display: flex;
+
+  align-items: center;
+}
+
+.circle-icon {
+  color: transparent;
+  width: 100px; /* Set your desired diameter */
+  height: 100px; /* Set your desired diameter */
+  border-radius: 50%; /* Creates a circular shape */
+  border: 10px solid;
+  border-image: conic-gradient(from 0deg, #0074cc 270deg, #4caf50 270deg);
+  border-image-slice: 1;
+}
+
+.percentage {
+  font-size: 14px;
+  text-align: left;
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.outer_circle {
+  position: relative;
+  /* margin: 25px; */
+  width: 250px;
+  height: 130px;
+  border-radius: 50%;
+  background: #ffffff;
+  margin-left: 5rem;
+  margin-top: 3rem;
+  margin-right: 2rem;
+}
+
+.inner_circle {
+  background-image: linear-gradient(270deg, rgb(72, 103, 129) 15%, #1cda9d 85%);
+  content: "";
+  position: absolute;
+  top: -20px;
+  bottom: -20px;
+  right: -20px;
+  left: -20px;
+  z-index: -1;
+  border-radius: inherit;
+}
+.bodyContainer {
+  border-radius: 10px;
+  border: 1px solid black;
+  margin: 0.5rem 0.5rem 0 0.5rem;
+  padding: 0.5rem;
+  display: inline-block;
+  padding-bottom: 0;
+}
+.main-content {
+  width: 82%;
+}
+.focus span {
+  margin-right: 1rem;
+  font-size: 12px;
+}
+
+.filter {
+  background-color: blue;
+  border-radius: 5px;
   color: white;
+  padding: 0.2rem;
+}
+/* Profile.css */
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
-.App-link {
-  color: #61dafb;
+.bell-icon {
+  margin-right: 1rem;
+  font-size: 14px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile-photo {
+  width: 30px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.username-dropdown {
+  position: relative;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+.welcome-text {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+
+.username-dropdown:hover .dropdown-content {
+  display: block;
+}
+.notification-badge {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  /* padding: 1px 9px; */
+  font-size: 9px;
+  position: relative;
+  top: -30%;
+  right: -45%;
+}
+h5 {
+  margin-bottom: 0;
+}
+
+.focus {
+  display: flex;
+  margin-bottom: 0.1rem;
+  justify-content: space-around;
+}
+select {
+  word-wrap: normal;
+  background-color: #31ade1;
+  color: white;
+  border-radius: 5px;
+  padding: 0.3rem;
+  font-weight: 700;
+  border: 0;
 }
